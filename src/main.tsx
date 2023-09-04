@@ -4,16 +4,10 @@ import "./index.module.css";
 import App from "./App";
 
 // 为 React 提供 Redux Store
-import store from './store'
-import { Provider } from 'react-redux'
+import store from "./store";
+import { Provider } from "react-redux";
 
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById("root")
-// );
-
+// React17渲染方式
 ReactDOM.render(
   <Provider store={store}>
     <App />

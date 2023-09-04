@@ -2,16 +2,18 @@ import React, { FC } from "react";
 //
 import { Route, useHistory } from "react-router-dom";
 import { Result, Button } from "antd";
+// 定义路由组件的属性（props）类型。
 import { RouteProps } from "react-router";
 
-const PrivateRoute: FC<RouteProps> = props => {
-  console.log('PrivateRoute=>props=>', props)
+const PrivateRoute: FC<RouteProps> = (props) => {
+  window.console.log("PrivateRoute=>props=>", props);
   // 获取token
   const logged = sessionStorage.getItem("token");
 
   // 编程式导航
   const history = useHistory();
 
+  // 登陆则映射到路由组件/没有登陆则
   return logged ? (
     <Route {...props} />
   ) : (

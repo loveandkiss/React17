@@ -14,25 +14,24 @@ import {
   FileOutlined,
 } from "@ant-design/icons";
 
-
-import { formatMessage } from "../../components/locales";
-
+// import { formatMessage } from "../../components/locales";
 
 const { Header, Content, Footer, Sider } = Layout;
 
-
 // 函数式组件
-const HomePage: FC = props => {
+const HomePage: FC = (props) => {
   // 收缩侧边栏
   const [collapsed, setCollapsed] = useState<boolean>(false);
 
-  // props 是 React 组件的输入。它们是从父组件向下传递给子组件的数据。
-  // console.log('HomePage=>props', props)
+  // props 是 React 组件的输入。
+  // 它们是从父组件向下传递给子组件的数据。
+  window.console.log("HomePage=>props", props);
 
   // The useLocation hook returns the location object that represents the current URL.
   // You can think about it like a useState that returns a new location whenever the URL changes.
   const location = useLocation();
 
+  // 侧边布局
   return (
     <Layout style={{ minHeight: "100vh", width: "100%" }}>
       <Sider
@@ -85,13 +84,11 @@ const HomePage: FC = props => {
           </Menu.SubMenu>
         </Menu>
       </Sider>
+
       <Layout className="site-layout">
         <Header className="site-layout-background" style={{ padding: 0 }} />
-        <Content style={{ margin: "16px 16px" }}>{ props.children }</Content>
-        <Footer style={{ textAlign: "center" }}>
-          vite-react-template ©2021 Created by 公众号：前端要努力
-          ；微信号843655240
-        </Footer>
+        <Content style={{ margin: "16px 16px" }}>{props.children}</Content>
+        <Footer style={{ textAlign: "center" }}>前端要努力-zyp</Footer>
       </Layout>
     </Layout>
   );

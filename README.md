@@ -1,4 +1,25 @@
-## 5 版本的 React Router
+## React Router【 5 版本的 】
+
+### Switch
+
+在 React Router 中，Switch 组件用于包裹多个 Route 组件，并在渲染时只选择匹配的第一个 Route 进行渲染。它的作用是实现路由匹配的规则。
+
+Switch 组件会按照从上到下的顺序依次查找内部的 Route 组件，并选择第一个与当前 URL 匹配的 Route 进行渲染。一旦找到匹配的 Route，就不会再继续查找下面的 Route。
+
+```tsx
+import { Switch, Route } from "react-router-dom";
+
+function App() {
+  return (
+    <Switch>
+      <Route path="/home" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/contact" component={Contact} />
+      <Route component={NotFound} />
+    </Switch>
+  );
+}
+```
 
 ## 如何引入 React
 
@@ -1014,3 +1035,16 @@ Now, any time you click the "Increment" and "Decrement" buttons:
 The corresponding Redux action will be dispatched to the store
 The counter slice reducer will see the actions and update its state
 The <Counter> component will see the new state value from the store and re-render itself with the new data
+
+### [Redux Toolkit]（https://redux-toolkit.js.org/usage/usage-guide#simplifying-reducers-with-createreducer）
+
+- Using Redux Toolkit => Usage Guide
+
+  It lets you decide how you want to handle everything, like store setup, what your state contains, and how you want to build your reducers.
+
+  Let's look at some of the ways that Redux Toolkit can help make your Redux-related code better.
+
+  1.  Store Setup
+      1.1 Manual Store Setup
+      1.2 Simplifying Store Setup with configureStore
+  2.  Writing Reducers
