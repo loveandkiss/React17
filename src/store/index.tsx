@@ -3,7 +3,7 @@ import { configureStore } from "@reduxjs/toolkit";
 /**
  * 将 Slice Reducers 添加到 Store 中
  */
-import counterReducer from "../features/counter/counterSlice";
+import counterReducer from "./counterSlice";
 
 // 创建 Redux Store 实例
 // You can also pass an object full of "slice reducers", and configureStore will call combineReducers for you:

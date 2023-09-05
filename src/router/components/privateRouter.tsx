@@ -6,7 +6,9 @@ import { Result, Button } from "antd";
 import { RouteProps } from "react-router";
 
 const PrivateRoute: FC<RouteProps> = (props) => {
-  window.console.log("PrivateRoute=>props=>", props);
+  // 彩色打印
+  // window.console.log("%cPrivateRoute=>props=>", 'color: red; font-size: 20px;');
+  // window.console.log(props);
   // 获取token
   const logged = sessionStorage.getItem("token");
 

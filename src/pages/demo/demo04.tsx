@@ -1,7 +1,7 @@
 // Demo04.tsx
-import React, { FC } from 'react';
+import React, { FC } from "react";
 
-import Counter from '../../features/counter/Counter';
+import Counter from "./components/Counter";
 
 const Demo04: FC = () => {
   return (
@@ -9,6 +9,6 @@ const Demo04: FC = () => {
       <Counter />
     </>
   );
-}
+};
 
 export default Demo04;

@@ -21,14 +21,17 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {
     increment: (state) => {
-      // state.value += 1
+      // eslint-disable-next-line no-param-reassign
+      state.value += 1;
     },
     decrement: (state) => {
-      // state.value -= 1
+      // eslint-disable-next-line no-param-reassign
+      state.value -= 1;
     },
     // 使用 PayloadAction 类型声明 `action.payload` 的内容
     incrementByAmount: (state, action: PayloadAction<number>) => {
-      // state.value += action.payload
+      // eslint-disable-next-line no-param-reassign
+      state.value += action.payload;
     },
   },
 });

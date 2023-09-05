@@ -4,10 +4,14 @@ import { Button } from "antd";
 /**
  * 在 React 组件中使用 Redux 状态和操作
  */
-import useAppSelector from "../../hooks/useAppSelector";
-import useAppDispatch from "../../hooks/useAppDispatch";
+import useAppSelector from "../../../hooks/useAppSelector";
+import useAppDispatch from "../../../hooks/useAppDispatch";
 //
-import { decrement, increment, incrementByAmount } from "./counterSlice";
+import {
+  decrement,
+  increment,
+  incrementByAmount,
+} from "../../../store/counterSlice";
 
 const Counter: FC = () => {
   // `state` 参数已正确推断为 `RootState` 类型
@@ -20,8 +24,8 @@ const Counter: FC = () => {
   // 省略渲染逻辑
   return (
     <>
-      <Button onClick={() => dispatch(increment())}>Increment</Button>
       <div>{count}</div>
+      <Button onClick={() => dispatch(increment())}>Increment</Button>
       <Button onClick={() => dispatch(decrement())}>Decrement</Button>
       <Button onClick={() => dispatch(incrementByAmount(10))}>
         incrementByAmount
