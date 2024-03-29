@@ -21,7 +21,6 @@ const LoginPassword: FC<ILoginParams> = ({ updateWay }) => {
 
   // 登陆
   function handleFinish(data: { [name: string]: any }) {
-
     loginApp({ userName: "why", pwd: "123" }).then((res) => {
       if (res.code === 200) {
         // 保存token
@@ -35,6 +34,7 @@ const LoginPassword: FC<ILoginParams> = ({ updateWay }) => {
   }
 
   function handleClick() {
+    // 调用传入的函数
     updateWay("message");
   }
 
@@ -51,7 +51,7 @@ const LoginPassword: FC<ILoginParams> = ({ updateWay }) => {
         </div>
       </div>
 
-      <Form onFinish={handleFinish}>
+      <Form onFinish={handleFinish} autoComplete="off">
         <Form.Item
           name="user_info"
           rules={[{ required: true, message: "用户名/手机号/邮箱不能为空" }]}

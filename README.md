@@ -21,6 +21,10 @@ function App() {
 }
 ```
 
+## react 与 react-dom
+
+## react-router 与 react-router-dom
+
 ## 如何引入 React
 
 - React 官方在 2022 年 3 月 29 日 React18 版本正式发布了。 => 18.0.0 (March 29, 2022)
@@ -152,18 +156,6 @@ const App = ({ message, children }: AppProps) => (
 ### useState<T>
 
 ### useRef<T>
-
-当初始值为 null 时，有两种创建方式:
-
-```jsx
-const ref1 = React.useRef < HTMLInputElement > null;
-
-const ref2 = (React.useRef < HTMLInputElement) | (null > null);
-```
-
-这两种的区别在于：
-第一种方式的 ref1.current 是只读的（read-only），并且可以传递给内置的 ref 属性，绑定 DOM 元素 ；
-第二种方式的 ref2.current 是可变的（类似于声明类的成员变量）
 
 ### useEffect
 
@@ -1048,3 +1040,23 @@ The <Counter> component will see the new state value from the store and re-rende
       1.1 Manual Store Setup
       1.2 Simplifying Store Setup with configureStore
   2.  Writing Reducers
+
+### 服务 json-server
+
+json-server 是一个轻量级的、基于 Node.js 的、用于快速搭建 RESTful API 的工具。使用 json-server，你可以从 JSON 文件中读取数据，并立即拥有一个可以通过 HTTP 请求进行访问的 API。
+
+以下是 json-server 的一些主要特点：
+
+快速启动：只需几个命令就可以设置和启动一个完整的 REST API。
+数据持久化：数据存储在 JSON 文件中，这意味着即使服务器重启，数据也不会丢失。
+路由功能：你可以定义自己的路由来处理特定的请求。
+跨平台：由于它是基于 Node.js 的，所以可以在任何支持 Node.js 的平台上运行。
+易于扩展：你可以通过编写中间件来扩展其功能。
+模拟延迟：为响应添加模拟延迟，这对于测试性能很有用。
+
+执行下面脚本便可以启动服务
+npm run mock
+
+登录
+
+随便输入账号（why）和密码（123）

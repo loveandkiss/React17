@@ -7,8 +7,6 @@ import App from "./App";
 import store from "./store";
 import { Provider } from "react-redux";
 
-window.console.log("===window====");
-
 // React17渲染方式
 ReactDOM.render(
   <Provider store={store}>

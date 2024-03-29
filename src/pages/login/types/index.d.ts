@@ -1,4 +1,4 @@
 export interface ILoginParams {
-  updateWay: (name: string) => void;
-  title?: string
+  updateWay: (name: "message" | "pwd") => void;
+  title?: string;
 }
